@@ -1,4 +1,4 @@
-package ru.eltech.sapr.web.contactsapp;
+package ru.eltech.sapr.web.storageapp;
 
 import org.h2.jdbcx.JdbcDataSource;
 

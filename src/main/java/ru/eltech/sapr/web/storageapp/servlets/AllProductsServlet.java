@@ -1,9 +1,9 @@
-package ru.eltech.sapr.web.contactsapp.servlets;
+package ru.eltech.sapr.web.storageapp.servlets;
 
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
-import ru.eltech.sapr.web.contactsapp.service.ContactService;
-import ru.eltech.sapr.web.contactsapp.thymeleaf.TemplateEngineUtil;
+import ru.eltech.sapr.web.storageapp.service.IProductService;
+import ru.eltech.sapr.web.storageapp.thymeleaf.TemplateEngineUtil;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/")
-public class AllContactsServlet extends HttpServlet {
+public class AllProductsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        ContactService service = (ContactService) getServletContext().getAttribute(ContactService.SERVICE_NAME);
+        IProductService service = (IProductService) getServletContext().getAttribute(IProductService.SERVICE_NAME);
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
-        context.setVariable("contacts", service.getAll());
-        engine.process("contacts.html", context, resp.getWriter());
+        context.setVariable("products", service.getAll());
+        engine.process("products.html", context, resp.getWriter());
     }
 }

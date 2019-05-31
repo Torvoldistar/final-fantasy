@@ -1,10 +1,6 @@
-package ru.eltech.sapr.web.contactsapp.servlets;
+package ru.eltech.sapr.web.storageapp.servlets;
 
-import ru.eltech.sapr.web.contactsapp.ConnectionManager;
-import ru.eltech.sapr.web.contactsapp.dao.H2ContactsDao;
-import ru.eltech.sapr.web.contactsapp.dao.InMemoryPhones;
-import ru.eltech.sapr.web.contactsapp.service.ContactService;
-import ru.eltech.sapr.web.contactsapp.service.ContactServiceImpl;
+import ru.eltech.sapr.web.storageapp.ConnectionManager;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -16,7 +12,7 @@ import java.io.IOException;
 public class ServiceInitializer implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        try {
+        /*try {
             DataSource dataSource = ConnectionManager.createDataSource();
             ContactServiceImpl service = new ContactServiceImpl(
                     new H2ContactsDao(dataSource),
@@ -25,7 +21,7 @@ public class ServiceInitializer implements ServletContextListener {
             sce.getServletContext().setAttribute(ContactService.SERVICE_NAME, service);
         } catch (IOException e) {
             throw new RuntimeException("Unable to initialize contacts service");
-        }
+        }*/
     }
 
     @Override

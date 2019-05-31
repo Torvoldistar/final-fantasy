@@ -1,4 +1,4 @@
-package ru.eltech.sapr.web.contactsapp.thymeleaf;
+package ru.eltech.sapr.web.storageapp.thymeleaf;
 
 import org.thymeleaf.TemplateEngine;
 

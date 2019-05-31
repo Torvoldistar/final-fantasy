@@ -61,15 +61,17 @@
         <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
-            <th scope="col">First name</th>
-            <th scope="col">Last name</th>
+            <th scope="col">name</th>
+            <th scope="col">price</th>
+            <th scope="col">comments</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="contact:${contacts}">
-            <th th:text="${contact.id}"></th>
-            <td th:text="${contact.firstName}"></td>
-            <td th:text="${contact.lastName}"></td>
+        <tr th:each="product:${products}">
+            <th th:text="${product.id}"></th>
+            <td th:text="${product.name}"></td>\
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.comments}"></td>
         </tr>
         </tbody>
     </table>

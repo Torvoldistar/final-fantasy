@@ -1,4 +1,4 @@
-package ru.eltech.sapr.web.contactsapp.servlets;
+package ru.eltech.sapr.web.storageapp.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

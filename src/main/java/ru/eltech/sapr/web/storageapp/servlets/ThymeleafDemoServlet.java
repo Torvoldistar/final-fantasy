@@ -1,8 +1,8 @@
-package ru.eltech.sapr.web.contactsapp.servlets;
+package ru.eltech.sapr.web.storageapp.servlets;
 
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
-import ru.eltech.sapr.web.contactsapp.thymeleaf.TemplateEngineUtil;
+import ru.eltech.sapr.web.storageapp.thymeleaf.TemplateEngineUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
